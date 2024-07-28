@@ -60,7 +60,7 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((buttonElement) => {
   buttonElement.addEventListener('click', () => {
     const selectedQuantity = Number(document.querySelector('.js-select-quantity').value);
 
-    const productId = buttonElement.dataset.productId;
+    const { productId } = buttonElement.dataset;
 
     let matchingItem;
     cart.forEach((item) => {
