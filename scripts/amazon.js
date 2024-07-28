@@ -83,7 +83,21 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((buttonElement) => {
     })
 
     document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
-    document.querySelector(`.js-added-to-cart-${productId}`).classList.add('display-added')
+
+    const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`)
+
+    addedMessage.classList.add('display-added')
+
+    let timeoutId;
+
+    if(timeoutId) clearTimeout(timeoutId);
+    else {
+      timeoutId = setTimeout(() => {
+        addedMessage.classList.remove('display-added');
+      }, 2000)
+    }
+
+   
   })
 })
 
