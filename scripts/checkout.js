@@ -142,7 +142,7 @@ function displayCartQuantity() {
       const inputQuantity = Number(document.querySelector('.js-quantity-input').value);
 
       cart.forEach((cartItem) => {
-        if(cartItem.productId === productId) cartItem.quantity = inputQuantity;
+        if(cartItem.productId === productId && inputQuantity >= 0 && inputQuantity < 1000) cartItem.quantity = inputQuantity;
       })
 
       saveToStorage();
