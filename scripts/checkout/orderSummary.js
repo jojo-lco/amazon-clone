@@ -4,11 +4,10 @@ import { formatCurrency } from '../utils/money.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import { deliveryOptions, getDeliveryOption } from '../../data/deliveryOptions.js'
 import { renderPaymentSummary } from './paymentSummary.js';
+import { renderCheckoutHeader } from './checkoutHeader.js';
 
 
 export function renderOrderSummary() {
-
-  displayCartQuantity();
 
   let cartSummaryHTML = '';
   cart.forEach((cartItem) => {
@@ -114,21 +113,10 @@ export function renderOrderSummary() {
       removeFromCart(productId);
 
       renderOrderSummary();
-      displayCartQuantity();
+      renderCheckoutHeader();
       renderPaymentSummary();
     })
   })
-
-  function displayCartQuantity() {
-    let cartQuantity = 0;
-      cart.forEach((item) => {
-        cartQuantity += item.quantity;
-      })
-
-      document.querySelector('.js-return-to-home-link').innerHTML = 
-      cartQuantity === 1 ? `${cartQuantity} item` : `${cartQuantity} items`;
-      
-  }
 
     document.querySelectorAll('.js-update-quality-link').forEach((link) => {
       link.addEventListener('click', () => {
@@ -140,7 +128,7 @@ export function renderOrderSummary() {
       
       updateItemQuantity(productId, container);
 
-      displayCartQuantity()
+      renderCheckoutHeader();
       })
     })
 
@@ -157,6 +145,7 @@ export function renderOrderSummary() {
         document.querySelector('.js-quantity-label').innerHTML = inputQuantity;
 
         renderOrderSummary();
+        renderCheckoutHeader();
         renderPaymentSummary();
 
         container.classList.remove('is-editing-quantity');
