@@ -113,10 +113,7 @@ export function renderOrderSummary() {
       const { productId } = link.dataset;
       removeFromCart(productId);
 
-      const container = document.querySelector(`.js-cart-item-container-${productId}`)
-      
-      container.remove();
-
+      renderOrderSummary();
       displayCartQuantity();
       renderPaymentSummary();
     })
@@ -158,6 +155,9 @@ export function renderOrderSummary() {
         saveToStorage();
 
         document.querySelector('.js-quantity-label').innerHTML = inputQuantity;
+
+        renderOrderSummary();
+        renderPaymentSummary();
 
         container.classList.remove('is-editing-quantity');
       })
