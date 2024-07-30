@@ -136,13 +136,10 @@ export function renderOrderSummary() {
 
         saveToStorage();
 
-        document.querySelector('.js-quantity-label').innerHTML = inputQuantity;
-
         renderOrderSummary();
         renderCheckoutHeader();
         renderPaymentSummary();
 
-        container.classList.remove('is-editing-quantity');
       })
     }
 
