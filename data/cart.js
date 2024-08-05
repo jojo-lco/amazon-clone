@@ -52,6 +52,12 @@ export function removeFromCart(productId) {
   saveToStorage();
 }
 
+export function resetCart() {
+  cart = [];
+  
+  saveToStorage();
+}
+
 export function updateDeliveryOption(productId, deliveryOptionId) {
   let matchingItem;
 
