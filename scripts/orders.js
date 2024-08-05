@@ -2,7 +2,7 @@ import { orders } from "../data/orders.js"
 import { getProduct } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 import { loadProductsFetch } from "../data/products.js";
-import { loadCartFetch } from "../data/cart.js";
+import { addToCart, loadCartFetch } from "../data/cart.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 async function loadPage() {
@@ -19,8 +19,6 @@ async function loadPage() {
   renderOrdersPage();
 }
 loadPage(); 
-
-console.log(orders);
 
 function renderOrdersPage() {
   let html = '';
@@ -72,7 +70,8 @@ function renderOrdersPage() {
               <div class="product-quantity">
                 Quantity: ${product.quantity}
               </div>
-              <button class="buy-again-button button-primary">
+              <button class="buy-again-button button-primary"
+                onclick="${addToCart(productId, 1)}">
                 <img class="buy-again-icon" src="images/icons/buy-again.png">
                 <span class="buy-again-message">Buy it again</span>
               </button>
