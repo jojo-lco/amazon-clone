@@ -34,7 +34,7 @@ The user should be able to:
     
   * Track its delivery.
 
- ![Amazon Clone gif](Screen Recording 2024-09-23 at 9.23.30 AM.mov)
+ ![Amazon Clone gif](demo-project)
 
 ## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/jojo-lco/amazon-clone/issues)
 
