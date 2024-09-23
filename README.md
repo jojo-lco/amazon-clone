@@ -1,4 +1,4 @@
-## The Study Wall
+## Amazon Project
 
 
 ## Description [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
@@ -34,7 +34,7 @@ The user should be able to:
     
   * Track its delivery.
 
- ![Amazon Clone gif]()
+ ![Amazon Clone gif](Screen Recording 2024-09-23 at 9.23.30 AM.mov)
 
 ## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/jojo-lco/amazon-clone/issues)
 
