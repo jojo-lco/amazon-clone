@@ -20,7 +20,7 @@
 
 ## Installation
 
-The app is deployed on Github pages: [Amazon Clone](https://jojo-lco/amazon-clone/)
+The app is deployed on Github pages: [Amazon Clone](https://jojo-lco.github.io/amazon-clone/)
 ## Usage
 
 When the user loads the page, the user is able to select an item they wish to purchase. 
