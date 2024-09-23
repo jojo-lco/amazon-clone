@@ -34,7 +34,7 @@ The user should be able to:
     
   * Track its delivery.
 
- ![Amazon Clone gif](amazon-demo.mov)
+ ![Amazon Clone gif](amazon.gif)
 
 ## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/jojo-lco/amazon-clone/issues)
 
